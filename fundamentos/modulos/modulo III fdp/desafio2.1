@@ -1,0 +1,84 @@
+SubAlgoritmo entrada(nombre Por Referencia, tipo Por Referencia, cant Por Referencia, precio Por Referencia)
+	Mostrar "¿Como se llama?"
+	Leer nombre
+	Mostrar ""
+	Mostrar "¿Que tipo de Prenda decea llevar?"
+	Repetir
+		Mostrar "1:-Franela de 25 BS"
+		Mostrar "2:-Franela de 150 BS"
+		Mostrar "3:-Franela de 168 BS"
+		Leer tipo
+		Mostrar ""
+		si tipo=1 Entonces
+			precio=25
+		SiNo
+			si tipo=2 Entonces
+				precio=150
+			SiNo
+				si tipo=3 Entonces
+					precio=168
+				SiNo
+					Mostrar "Numero Invalido "
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que (tipo>=1 y tipo<=3)
+	Mostrar "¿cuantas unidades desea llevar? "
+	Leer cant
+FinSubAlgoritmo
+
+	
+
+SubAlgoritmo procesos(precio Por Valor,cant Por Valor, descuento Por Referencia, descuentocon Por Referencia,monto Por Referencia,total Por Referencia)
+	monto=cant*precio
+	si cant>=24 Entonces
+		descuento=15
+	SiNo
+		si cant>=6 y cant<=11 Entonces
+			descuento=5
+		SiNo
+			descuento=0
+		FinSi
+	FinSi
+	descuentocon=monto*descuento/100
+	total=monto-descuentocon
+	
+	Mostrar "Ya an sido calculados sus procesos"
+FinSubAlgoritmo
+
+SubAlgoritmo salidas(nombre Por Valor, tipo Por valor, cant Por Valor, descuento Por Valor, monto Por Valor, total Por Valor, descuentocon Por Valor,precio Por Valor)
+	Mostrar "*-*-*-*-*-*-**---**-*-**--*-*-*-**-*-*--*-***-*--**-"
+	Mostrar ""
+	Mostrar "Nombre " nombre
+	Mostrar "Tipo de franela tiene como costo: " precio
+	Mostrar "La cantidad de franela fue: " cant
+	Mostrar "Monto completo de la compra " monto
+	Mostrar "Descuento a aplicar " descuento
+	Mostrar "el total a pagar es " total
+	Mostrar ""
+	
+	
+	
+FinSubAlgoritmo
+
+Algoritmo sin_titulo
+	
+	Repetir
+		Mostrar ""
+		Mostrar "1:-Registrar entradas "
+		Mostrar "2:-Calcular resultados "
+		Mostrar "3:-mostrar salidas "
+		Mostrar "4:- salir "
+		Leer menu
+		Segun menu hacer
+			1: entrada(nombre,tipo,cant,precio)
+			2: procesos(precio,cant,descuento,descuentocon,monto,total)
+			3: salidas(nombre,tipo,cant,descuento,monto,total,descuento,precio)
+			4: mostrar "usted a escojido salir "
+			De Otro Modo:
+				Mostrar " Numero Invalido "
+		FinSegun
+	Hasta Que menu=4
+	
+	
+FinAlgoritmo

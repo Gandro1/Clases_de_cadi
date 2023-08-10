@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+1. Modificar el script del capitulo 7 esta vez solicitando informacion al usuario con el método prompt.
+2. Validar en caso de que el usuario devuelava uan cadena vacia o null.
+3. Notificar con el uso de alert, donde considere.
+4. Verificar pasos con el uso de confirm, donde considere.
+
+
+
+
+
+=======
+1. Modificar el script del capitulo 7 esta vez solicitando informacion al usuario con el método prompt.
+2. Validar en caso de que el usuario devuelava uan cadena vacia o null.
+3. Notificar con el uso de alert, donde considere.
+4. Verificar pasos con el uso de confirm, donde considere.
+
+
+
+
+
+>>>>>>> eeedd12 (Primer commit)

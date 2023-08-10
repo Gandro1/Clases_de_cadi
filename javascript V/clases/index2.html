@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto">
+    <button id="request">Hacer petición</button>
+    <div id="resultado">
+    </div>
+    <script>
+
+        request.onclick = function(){
+            $.ajax({
+                url : "http://www.omdbapi.com/?apikey=7a711b58&s="+texto.value,
+                type : "get",
+                success: function (resp){
+                    console.log("llego toda la respuesta")
+                    console.log(resp)
+                    mostrarResultados(resp)
+                }
+            })
+        }
+    
+        function mostrarResultados(respuesta){
+            resultado.innerText = ""
+            if (respuesta.Response == "True"){
+                // se recorre el arreglo que contiene la respuesta que retorna el api
+                for (i=0;i<respuesta.Search.length;i++)
+                    $("#resultado").append("<p>"+respuesta.Search[i].Title+"</p>")
+    
+                $("#resultado").append("<p>"+respuesta.totalResults + " resultados </p>")
+            }else
+                resultado.innerText = "No hay coincidencias"
+        } 
+        
+        
+    </script>
+</body>
+</html>

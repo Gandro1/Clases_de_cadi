@@ -1,0 +1,116 @@
+*{
+    font-family: 'Righteous', cursive;
+    margin: 0;
+}
+.headnav{
+        display: flex;
+        justify-content: space-between;
+        div:first-child{
+            h1{
+                color:map-get($map: $palette, $key:'secundary' );
+            }
+        }
+        div:last-child{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            li{
+                padding: map-get($map: $paddings-lados, $key:xg );
+            }
+            div{
+                img{
+                    padding: map-get($map: $paddings-lados, $key:lg );
+                    @include loguitos;
+                }
+            }
+        }
+    }
+.baner{
+background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/bob.jpg");
+background-repeat: no-repeat;
+background-size: 100% 90vh;
+background-position: center center;
+object-fit: contain;
+display: grid;
+/* grid-auto-rows: minmax(1000px,auto); */
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: repeat(1,1fr);
+justify-items: stretch;
+}
+.c1{
+    input{
+        height: map-get($map: $fontSizes, $key:xlarge );
+        width:  map-get($map: $fontSizes, $key:X );
+        margin: map-get($map: $paddings-arribaj, $key:xx );
+
+    }
+    button{
+        background: linear-gradient(292deg, rgba(213,32,32,0.9360119047619048) 32%, rgba(213,126,32,1) 75%);;
+        color: white;
+        border: none;
+        height: map-get($map: $fontSizes, $key:xlarge );
+        width:  map-get($map: $fontSizes, $key:XXX );
+    }
+}
+.contenedor,.baner{
+/* width: 100%; */
+height: 80vh;
+}
+.c1, .c2, .c3, .c4, .c5 {
+width: 100% !important;
+height: 100% !important  ;
+}
+.letrabaner1{
+@include divcontenedoras(40px 0 0 100px, 400px,300px);
+font-size: map-get($map: $fontSizes, $key:xx );
+color: map-get($map: $palette, $key: 'primary');
+}
+.letrabaner2{
+@include divcontenedoras(0 0 0 0,600px,300px);
+color: map-get($map: $palette, $key: 'grey');
+}
+.conteltra{
+display: flex;
+justify-content:center;
+}
+.a1,.a2,.a3,.a4{
+    margin: map-get($map: $paddings-arribaj, $key:XX );
+    @include divcontenedoras(0 50px 0 50px, 200px,400px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    // text-align: start;
+    h1{
+        font-size: map-get($map: $fontSizes, $key:xx );
+        margin: map-get($map: $paddings-arribaj, $key:xg );
+        margin: map-get($map: $paddings-lados, $key:xg );
+        text-align: start;
+    }
+    h3{
+        margin: map-get($map: $paddings-arribaj, $key:xg );
+        text-align: start;
+    }
+    p{
+        margin: map-get($map: $paddings-arribaj, $key:xg );
+        text-align: justify;
+        vertical-align:middle;
+    }
+    i{
+        height: 100px;
+        width: 100px;
+    }
+}
+.a1{
+    background-color:map-get($map: $palette, $key: 'primary'); ;
+}
+.a2{
+    background-color:map-get($map: $palette, $key: 'red'); ;
+}
+.a3{
+    background-color:map-get($map: $palette, $key: 'black-claro'); ;
+    
+}
+.a4{
+    background-color:map-get($map: $palette, $key: 'grey'); ;
+
+}

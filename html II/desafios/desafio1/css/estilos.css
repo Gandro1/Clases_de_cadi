@@ -1,0 +1,68 @@
+<<<<<<< HEAD
+
+.cassi{ 
+    margin-right: 20px;
+    display: inline-block;
+}
+.divli{
+    float: right;
+}
+.divimg{
+    float: left;
+    
+}
+
+#ulcassi li{
+    float: left;
+    margin-left: 15px;
+}
+#h3cassi{
+    font-size: 20px;
+}
+
+/*body*/
+
+.h1{
+font-size: 100px;
+
+}
+.h5{
+    color: white;
+}
+.imgdesafio img{
+    width: 1270px;
+=======
+
+.cassi{ 
+    margin-right: 20px;
+    display: inline-block;
+}
+.divli{
+    float: right;
+}
+.divimg{
+    float: left;
+    
+}
+
+#ulcassi li{
+    float: left;
+    margin-left: 15px;
+}
+#h3cassi{
+    font-size: 20px;
+}
+
+/*body*/
+
+.h1{
+font-size: 100px;
+
+}
+.h5{
+    color: white;
+}
+.imgdesafio img{
+    width: 1270px;
+>>>>>>> eeedd12 (Primer commit)
+}

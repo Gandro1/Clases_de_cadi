@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous">
+  <title>JS 3</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+  <header class="container" >
+    <div class="row justify-content-between">
+      <div class="col-3">
+          <a href="" class="text-decoration-none">
+              <svg class="kOqhQd" aria-hidden="true" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="height: 50px;">
+                  <path fill="none" d="M0,0h40v40H0V0z"></path>
+                  <g>
+                      <path d="M19.7,19.2L4.3,35.3c0,0,0,0,0,0c0.5,1.7,2.1,3,4,3c0.8,0,1.5-0.2,2.1-0.6l0,0l17.4-9.9L19.7,19.2z" fill="#EA4335"></path>
+                      <path d="M35.3,16.4L35.3,16.4l-7.5-4.3l-8.4,7.4l8.5,8.3l7.5-4.2c1.3-0.7,2.2-2.1,2.2-3.6C37.5,18.5,36.6,17.1,35.3,16.4z" fill="#FBBC04"></path>
+                      <path d="M4.3,4.7C4.2,5,4.2,5.4,4.2,5.8v28.5c0,0.4,0,0.7,0.1,1.1l16-15.7L4.3,4.7z" fill="#4285F4"></path>
+                      <path d="M19.8,20l8-7.9L10.5,2.3C9.9,1.9,9.1,1.7,8.3,1.7c-1.9,0-3.6,1.3-4,3c0,0,0,0,0,0L19.8,20z" fill="#34A853"></path>
+                  </g>
+              </svg>
+              <span class="fw-bold">La ruleta de la suerte</span>
+          </a>
+      </div>
+      
+      <!-- Button trigger modal -->
+      <div class="col-3">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Registrate!
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 id="saludoUser"></h1>
+    <div class="row">
+      <!-- <h1>Escribe tu jugada!!!</h1> -->
+      <div>
+        <label for="jugada">Jugada:</label>
+        <input type="text" id="jugada">
+      </div>
+      <button class="btn btn-success" onclick="cargarJugada()">Guardar Jugada</button>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <button class="btn btn-warning" onclick="verJugadas()">Ver jugadas</button>
+      </div>
+    </div>
+    <div id="score" class="row mt-5">
+      <h2>Score: <span></span></h2>
+      <button class="btn btn-primary" onclick="mostrarScore()">Mostrar Score</button>
+    </div>
+  </main>
+
+
+
+
+
+
+
+  <!-- MODAL PARA CAPTURAR LOS DATOS DEL USUARIO -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Captura de datos dl usuario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="GET" class="row g-3 needs-validation" novalidate id="formReg">
+            <div class="col-md-4">
+              <label for="username" class="form-label">Usuario</label>
+              <input type="text" class="form-control" id="username" value="" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="email" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="email" value="" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="phone" class="form-label">Telefono</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="phone" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Por favor suministra un telefono.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="password" class="form-label">Clave</label>
+              <input type="password" class="form-control" id="password" required>
+              <div class="invalid-feedback">
+                Suministre una contraseña
+              </div>
+            </div>
+
+            <!-- <div class="col-md-3">
+                  <label for="validationCustom04" class="form-label">State</label>
+                  <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom05" class="form-label">Zip</label>
+                  <input type="text" class="form-control" id="validationCustom05" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                      Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div> -->
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit" id="registrarse" onclick="registrarUsuario()" >Registrate!</button>
+            </div>
+          </form>
+
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <!-- SCRIPT DE LA APLICACION -->
+  <script src="./js/main.js"></script>
+
+  <!-- SCRIPT DE BOOTSTRAP -->
+  <!-- VALIDACION DE FORMULARIO DE BOOTSTRAP -->
+  <!-- <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()</script> -->
+</body>
+
+</html>

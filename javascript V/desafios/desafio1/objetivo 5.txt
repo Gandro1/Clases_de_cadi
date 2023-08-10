@@ -1,0 +1,5 @@
+mi pagina es pokeapi.co
+en esta pagina de forma sencilla podemos consulta los pokemons (unos animalitos)
+solo hay que ingresar : https://pokeapi.co/api/v2/pokemon/1
+donde esta el numero 1 ponemos el nombre del pokemon o el numero que le corresponda
+es un uso sencillo

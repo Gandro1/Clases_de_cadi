@@ -1,0 +1,44 @@
+<<<<<<< HEAD
+body{
+margin: 0;
+}
+#head{
+width: 100%;
+height: 3%;
+background-color: black;
+}
+#head>img{
+display: inline-flex;
+height: 15px;
+width: 15px;
+margin-left: 40px;
+margin-top: 10px;
+filter: invert(100%) sepia(81%) saturate(56%) hue-rotate(253deg) brightness(115%) contrast(96%);
+}
+.lup{
+position: relative;
+margin-left: 0 !important;
+right: -1000px !important;
+=======
+body{
+margin: 0;
+}
+#head{
+width: 100%;
+height: 3%;
+background-color: black;
+}
+#head>img{
+display: inline-flex;
+height: 15px;
+width: 15px;
+margin-left: 40px;
+margin-top: 10px;
+filter: invert(100%) sepia(81%) saturate(56%) hue-rotate(253deg) brightness(115%) contrast(96%);
+}
+.lup{
+position: relative;
+margin-left: 0 !important;
+right: -1000px !important;
+>>>>>>> eeedd12 (Primer commit)
+}

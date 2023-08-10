@@ -1,0 +1,508 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+        crossorigin="anonymous">
+    <title>chao mundo</title>
+</head>
+<style>
+    #datos tr:first-child td {
+        font-weight: bold;
+        background-color: rgb(236, 136, 21)
+    }
+
+    #datos td {
+        padding: 7px;
+    }
+</style>
+
+<body>
+    <!-- Inputs para agregar a la tabla -->
+    <div>
+        <label for="Cedula">Cedula:</label>
+        <input type="text" id="Cedula">
+        <br>
+        <br>
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre">
+        <br>
+        <br>
+        <label for="Materia">Materia:</label>
+        <input type="text" id="Materia">
+        <br>
+        <br>
+        <label for="Calificacion">Calificacion:</label>
+        <input type="text" id="Calificacion">
+        <br>
+        <br>
+        <button id="guardar">Guardar Datos</button>
+
+    </div>
+    <table id="datos">
+        <tr>
+            <td>Cedula</td>
+            <td>Nombre</td>
+            <td>Materia</td>
+            <td>Calificacion</td>
+        </tr>
+        <tr>
+            <td>14755823</td>
+            <td>Eduardo Mejias</td>
+            <td>Javascript</td>
+            <td>100</td>
+        </tr>
+    </table>
+
+    <!-- CLASE 2 JS3 -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <form onsubmit="return controlForm(this)" action="" method="GET" class="col-6 border border-4 border-primary rounded" id="formulario">
+                <div class="mb-3">
+                    <label for="usuario" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="usuarioHelp">
+                    <div id="usuarioHelp" class="d-none form-text">No dejes sin indicar tu usuario</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo</label>
+                    <input type="email" class="form-control" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="d-none form-text">No dejes sin indicar tu correo.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Clave</label>
+                    <input type="password" class="form-control" name="clave" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" name="telefono" id="telefono">
+                </div>
+                <p>Selecciona tu preferencia</p>
+                <select name="preferencia" class="form-select" multiple>
+                    <option value="0">Peliculas</option>
+                    <option value="1">Series</option>
+                    <option value="2">Libros</option>
+                </select>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="terminos" name="terminos">
+                    <label class="form-check-label" for="exampleCheck1">Aceptas los terminos</label>
+                </div>
+                <button type="submit" class="btn btn-success">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FIN CLASE 2 JS3 -->
+
+    <!-- SCRIPTS DE LA CLASE 2 JS3 -->
+    <script>
+        //VALIDACION NO REUSABLE
+        // function controlForm(a) {
+        //     if(a.usuario.value == ""){
+        //         alert("el campo usuario es obligatorio");
+        //         a.usuario.focus();
+        //         return false
+        //     }else{
+        //         return true
+        //     }
+        // }
+        function controlForm(a) {
+            if (validarInputText(a.usuario, "el campo usuario es obligatorio, o no cumple con las reglas")) {
+                return false
+            } else {
+                if (false) {
+                    return false
+                } else {
+                    if(validarSelect(a.preferencia)){
+                        return false
+                    }else{
+                        if(validarCheckbox(a.terminos)){
+                            return false
+                        }else{
+                            return true
+                            //a.submit()
+                        }
+                    }
+                }
+            }
+        }
+        function validarInputText(campo, message) {
+            let regExpText = /^[A-Za-z][A-Za-z0-9-_]{0,6}[A-Za-z0-9]{0,1}$/gmi;
+            if (!(regExpText.test(campo.value)) || campo.value == "") {
+                alert(message);
+                campo.focus();
+                 return true
+            }else{
+                return false
+            }
+        }
+        function validarSelect(select) {
+            if(select.selectedIndex == -1){
+                console.log(select);
+                alert("Debe seleccionar alguna opcion");
+                select.focus();
+                return true
+            }else{
+                return false
+            }
+        }
+        function validarCheckbox(check) {
+            if(check.checked == false){
+                alert("Debes aceptar los terminos");
+                check.focus();
+                return true
+            }else {
+                return false
+            }
+        }
+    </script>
+    <!-- FIN SCRIPTS DE LA CLASE 2 JS3 -->
+
+    <!-- SCRIPTS DE BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- SCRIPTS DE LA CLASE -->
+    <script>
+        var body = document.body;
+        var elDespedida = document.createElement("h1");
+        var despedida = document.createTextNode("Chao Mundo");
+
+        elDespedida.appendChild(despedida);
+
+        body.appendChild(elDespedida);
+
+        elDespedida.addEventListener("click", function () {
+            console.log("click en el elemento");
+            console.log(this);
+            this.parentNode.removeChild(this);
+        });
+    </script>
+    <script>
+        //seleccion al body
+        var body = document.body;
+        //creacion de elementos
+        var input = document.createElement("input");
+        var btn = document.createElement("button");
+        var lista = document.createElement("ol");
+        //agregar elementos al body
+        body.appendChild(input);
+        body.appendChild(btn);
+        body.appendChild(lista);
+        //seteo del placeholder delñm input
+        input.setAttribute("placeholder", "ingresa el mensaje");
+        //seteo del value del boton
+        btn.innerText = "Registrar";
+
+        //Definicion del metodo de agregar li
+        function agregarLi() {
+            if (input.value != "") {
+                let nuevoLi = document.createElement("li");
+                nuevoLi.innerText = input.value;
+                nuevoLi.addEventListener("dblclick", function () {
+                    this.parentNode.removeChild(this);
+                })
+                lista.appendChild(nuevoLi);
+                input.value = "";
+            } else {
+                alert("no dejes el mensaje vacio");
+            }
+        }
+
+
+        btn.addEventListener("click", agregarLi)
+    </script>
+    <script>
+        var tabla = document.getElementById("datos");
+        tabla.setAttribute("border", "solid");
+        //consultar datos de la tabla
+        for (let i = 0; i < tabla.rows.length; i++) {
+            //recorrido por fila
+            //tabla[i] es la fila i-esima de la tabla
+            console.log(`En la fila ${i + 1} º:`);
+            for (let j = 0; j < tabla.rows[i].cells.length; j++) {
+                console.log(`El valor de la celda ${j + 1} es ${tabla.rows[i].cells[j].innerText}`)
+            }
+        }
+        //metodo para agregar datos a la tabla
+        function addRow() {
+            let arrayDatos = [];
+            arrayDatos[0] = document.getElementById("Cedula").value;
+            arrayDatos[1] = document.getElementById("Nombre").value;
+            arrayDatos[2] = document.getElementById("Materia").value;
+            arrayDatos[3] = document.getElementById("Calificacion").value;
+
+            //creacion de la fila
+            let newFila = tabla.insertRow(-1);
+            //creacion de las celdas
+            for (let i = 0; i < arrayDatos.length; i++) {
+                let newCell = newFila.insertCell(-1);
+                newCell.innerText = arrayDatos[i];
+            }
+        }
+        //llamado del metodo para cargar datos en la tabla
+        var btnadd = document.getElementById("guardar");
+        btnadd.addEventListener("click", addRow);
+
+
+    </script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+        crossorigin="anonymous">
+    <title>chao mundo</title>
+</head>
+<style>
+    #datos tr:first-child td {
+        font-weight: bold;
+        background-color: rgb(236, 136, 21)
+    }
+
+    #datos td {
+        padding: 7px;
+    }
+</style>
+
+<body>
+    <!-- Inputs para agregar a la tabla -->
+    <div>
+        <label for="Cedula">Cedula:</label>
+        <input type="text" id="Cedula">
+        <br>
+        <br>
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre">
+        <br>
+        <br>
+        <label for="Materia">Materia:</label>
+        <input type="text" id="Materia">
+        <br>
+        <br>
+        <label for="Calificacion">Calificacion:</label>
+        <input type="text" id="Calificacion">
+        <br>
+        <br>
+        <button id="guardar">Guardar Datos</button>
+
+    </div>
+    <table id="datos">
+        <tr>
+            <td>Cedula</td>
+            <td>Nombre</td>
+            <td>Materia</td>
+            <td>Calificacion</td>
+        </tr>
+        <tr>
+            <td>14755823</td>
+            <td>Eduardo Mejias</td>
+            <td>Javascript</td>
+            <td>100</td>
+        </tr>
+    </table>
+
+    <!-- CLASE 2 JS3 -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <form onsubmit="return controlForm(this)" action="" method="GET" class="col-6 border border-4 border-primary rounded" id="formulario">
+                <div class="mb-3">
+                    <label for="usuario" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="usuarioHelp">
+                    <div id="usuarioHelp" class="d-none form-text">No dejes sin indicar tu usuario</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo</label>
+                    <input type="email" class="form-control" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="d-none form-text">No dejes sin indicar tu correo.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Clave</label>
+                    <input type="password" class="form-control" name="clave" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" name="telefono" id="telefono">
+                </div>
+                <p>Selecciona tu preferencia</p>
+                <select name="preferencia" class="form-select" multiple>
+                    <option value="0">Peliculas</option>
+                    <option value="1">Series</option>
+                    <option value="2">Libros</option>
+                </select>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="terminos" name="terminos">
+                    <label class="form-check-label" for="exampleCheck1">Aceptas los terminos</label>
+                </div>
+                <button type="submit" class="btn btn-success">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FIN CLASE 2 JS3 -->
+
+    <!-- SCRIPTS DE LA CLASE 2 JS3 -->
+    <script>
+        //VALIDACION NO REUSABLE
+        // function controlForm(a) {
+        //     if(a.usuario.value == ""){
+        //         alert("el campo usuario es obligatorio");
+        //         a.usuario.focus();
+        //         return false
+        //     }else{
+        //         return true
+        //     }
+        // }
+        function controlForm(a) {
+            if (validarInputText(a.usuario, "el campo usuario es obligatorio, o no cumple con las reglas")) {
+                return false
+            } else {
+                if (false) {
+                    return false
+                } else {
+                    if(validarSelect(a.preferencia)){
+                        return false
+                    }else{
+                        if(validarCheckbox(a.terminos)){
+                            return false
+                        }else{
+                            return true
+                            //a.submit()
+                        }
+                    }
+                }
+            }
+        }
+        function validarInputText(campo, message) {
+            let regExpText = /^[A-Za-z][A-Za-z0-9-_]{0,6}[A-Za-z0-9]{0,1}$/gmi;
+            if (!(regExpText.test(campo.value)) || campo.value == "") {
+                alert(message);
+                campo.focus();
+                 return true
+            }else{
+                return false
+            }
+        }
+        function validarSelect(select) {
+            if(select.selectedIndex == -1){
+                console.log(select);
+                alert("Debe seleccionar alguna opcion");
+                select.focus();
+                return true
+            }else{
+                return false
+            }
+        }
+        function validarCheckbox(check) {
+            if(check.checked == false){
+                alert("Debes aceptar los terminos");
+                check.focus();
+                return true
+            }else {
+                return false
+            }
+        }
+    </script>
+    <!-- FIN SCRIPTS DE LA CLASE 2 JS3 -->
+
+    <!-- SCRIPTS DE BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- SCRIPTS DE LA CLASE -->
+    <script>
+        var body = document.body;
+        var elDespedida = document.createElement("h1");
+        var despedida = document.createTextNode("Chao Mundo");
+
+        elDespedida.appendChild(despedida);
+
+        body.appendChild(elDespedida);
+
+        elDespedida.addEventListener("click", function () {
+            console.log("click en el elemento");
+            console.log(this);
+            this.parentNode.removeChild(this);
+        });
+    </script>
+    <script>
+        //seleccion al body
+        var body = document.body;
+        //creacion de elementos
+        var input = document.createElement("input");
+        var btn = document.createElement("button");
+        var lista = document.createElement("ol");
+        //agregar elementos al body
+        body.appendChild(input);
+        body.appendChild(btn);
+        body.appendChild(lista);
+        //seteo del placeholder delñm input
+        input.setAttribute("placeholder", "ingresa el mensaje");
+        //seteo del value del boton
+        btn.innerText = "Registrar";
+
+        //Definicion del metodo de agregar li
+        function agregarLi() {
+            if (input.value != "") {
+                let nuevoLi = document.createElement("li");
+                nuevoLi.innerText = input.value;
+                nuevoLi.addEventListener("dblclick", function () {
+                    this.parentNode.removeChild(this);
+                })
+                lista.appendChild(nuevoLi);
+                input.value = "";
+            } else {
+                alert("no dejes el mensaje vacio");
+            }
+        }
+
+
+        btn.addEventListener("click", agregarLi)
+    </script>
+    <script>
+        var tabla = document.getElementById("datos");
+        tabla.setAttribute("border", "solid");
+        //consultar datos de la tabla
+        for (let i = 0; i < tabla.rows.length; i++) {
+            //recorrido por fila
+            //tabla[i] es la fila i-esima de la tabla
+            console.log(`En la fila ${i + 1} º:`);
+            for (let j = 0; j < tabla.rows[i].cells.length; j++) {
+                console.log(`El valor de la celda ${j + 1} es ${tabla.rows[i].cells[j].innerText}`)
+            }
+        }
+        //metodo para agregar datos a la tabla
+        function addRow() {
+            let arrayDatos = [];
+            arrayDatos[0] = document.getElementById("Cedula").value;
+            arrayDatos[1] = document.getElementById("Nombre").value;
+            arrayDatos[2] = document.getElementById("Materia").value;
+            arrayDatos[3] = document.getElementById("Calificacion").value;
+
+            //creacion de la fila
+            let newFila = tabla.insertRow(-1);
+            //creacion de las celdas
+            for (let i = 0; i < arrayDatos.length; i++) {
+                let newCell = newFila.insertCell(-1);
+                newCell.innerText = arrayDatos[i];
+            }
+        }
+        //llamado del metodo para cargar datos en la tabla
+        var btnadd = document.getElementById("guardar");
+        btnadd.addEventListener("click", addRow);
+
+
+    </script>
+</body>
+
+>>>>>>> eeedd12 (Primer commit)
+</html>

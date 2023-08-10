@@ -1,0 +1,10 @@
+@mixin loguitos {
+width: 20px;
+height: 20px;
+}
+@mixin divcontenedoras($pad, $Widtht,$height){
+width: $Widtht;
+text-align: center;
+height: $height;
+padding:$pad;
+}

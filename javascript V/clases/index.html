@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto">
+    <button id="request">Hacer petición</button>
+    <div id="resultado">
+    </div>
+</body>
+<script>
+    //var xhtr = new XMLHttpRequest();
+
+    request.onclick = function(){
+        $.ajax({
+            url : "http://www.omdbapi.com/?apikey=7a711b58&s="+texto.value,
+            type : "get",
+            success: function (){
+                
+            }
+        })
+        xhtr.open("get",url);
+        xhtr.send();
+        
+xhtr.open
+("get",url);
+        xhtr.send();
+    }
+
+    xhtr.onreadystatechange = function (){
+        if (this.readyState == 4 && this.status == 200){
+            console.log("llego toda la respuesta")
+            resultado.innerText = ""
+            try{
+                respuesta = JSON.parse(this.responseText)
+                
+                if (respuesta.Response == "True"){
+                    for(i=0;i<respuesta.Search.length;i++)
+                    $("#resultado").append("<p>"+respuesta.Search[i].Title+"</p>")
+
+                $("#resultado").append("<p>"+respuesta.totalResults+" resultados </p>")
+                }else
+                    resultado.innerText = "No hay coincidencias"
+            }catch(e){
+                resultado.innerText = "Error al procesar los datos"
+            } 
+        }
+    }   
+</script> 
+    
+
+</html>

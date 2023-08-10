@@ -1,0 +1,364 @@
+<<<<<<< HEAD
+/*body*/
+.cassi{ 
+    margin-right: 20px;
+    display: inline-block;
+}
+#visi:hover{
+    visibility: hidden;
+}
+.divli{
+    float: right;
+}
+.divimg{
+    float: left;
+    
+}
+
+#ulcassi li{
+    float: left;
+    margin-left: 15px;
+}
+#h3cassi{
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+
+}
+.h1{
+font-size: 100px;
+
+}
+.h5{
+    color: white;
+}
+.imgdesafio img{
+    width: 1270px;
+}
+
+/* Dentro del recuadro morado*/
+.logo{
+    display: block;
+    width: 5%;
+}
+
+.cuadro{
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(153deg, rgba(119,0,255,0.227328431372549) 0%, rgba(141,0,255,0.26094187675070024) 95%);
+    padding: 25px 5%;
+    box-sizing: border-box;
+}
+
+.divbott1{
+    display: inline-block;
+    height: 40px;
+    padding: -30px;
+    width: 30%;
+}
+
+.divbott2{
+    display: inline-block;
+    height: 50px;
+    width: 15%;
+    position: relative;
+    top: 28px;
+}
+
+.divbott3{
+    display: inline-block;
+    height: 50px;
+    width: 15%;
+    position: relative;
+    top: -13px;
+    
+}
+
+.divbott4{
+    display: inline-block;
+    height: 50px;
+    width: 15%;
+    position: relative;
+    top: 8px;
+    
+}
+
+.divbott5{
+    display: inline-block;
+    height: 50px;
+    width: 15%;
+    position: relative;
+    top: 50px;
+    
+}
+
+.raya{
+    border-left: 1.5px solid black;
+    height: 278px;
+    position: absolute;
+
+}
+
+.titlediv{
+    color: black;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.contenido{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.bt{
+    background-color: blueviolet;
+    padding: 20px 15px;
+    border: none;
+    margin-left: 20px;
+    color: white;
+}
+
+#bt2{
+    position: relative;
+    bottom: -41px;
+}
+#bt3{
+    position: relative;
+    bottom: -20px;
+}
+
+.fl{
+    display: block;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    margin-left: 30px;
+}
+/* }
+.flecha{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    transform: rotate(45deg);
+    float: right;
+    text-decoration: none;
+    color: black;
+}
+.flecha2{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    transform: rotate(45deg);
+    float: right;
+    text-decoration: none;
+    color: black;
+    top: -100;
+} */
+.comentarios{
+    margin-left: 110px;
+    bottom: 150px;
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    height: 30px;
+    width: 90px;
+    background-color: rgb(18, 156, 211);
+    transform: rotate(270deg);
+}
+
+.naruto{
+    width: 900px;
+    padding: 100%;
+=======
+/*body*/
+.cassi{ 
+    margin-right: 20px;
+    display: inline-block;
+}
+#visi:hover{
+    visibility: hidden;
+}
+.divli{
+    float: right;
+}
+.divimg{
+    float: left;
+    
+}
+
+#ulcassi li{
+    float: left;
+    margin-left: 15px;
+}
+#h3cassi{
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+
+}
+.h1{
+font-size: 100px;
+
+}
+.h5{
+    color: white;
+}
+.imgdesafio img{
+    width: 1270px;
+}
+
+/* Dentro del recuadro morado*/
+.logo{
+    display: block;
+    width: 5%;
+}
+
+.cuadro{
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(153deg, rgba(119,0,255,0.227328431372549) 0%, rgba(141,0,255,0.26094187675070024) 95%);
+    padding: 25px 5%;
+    box-sizing: border-box;
+}
+
+.divbott1{
+    display: inline-block;
+    height: 40px;
+    padding: -30px;
+    width: 30%;
+}
+
+.divbott2{
+    display: inline-block;
+    height: 50px;
+    width: 15%;
+    position: relative;
+    top: 28px;
+}
+
+.divbott3{
+    display: inline-block;
+    height: 50px;
+    width: 15%;
+    position: relative;
+    top: -13px;
+    
+}
+
+.divbott4{
+    display: inline-block;
+    height: 50px;
+    width: 15%;
+    position: relative;
+    top: 8px;
+    
+}
+
+.divbott5{
+    display: inline-block;
+    height: 50px;
+    width: 15%;
+    position: relative;
+    top: 50px;
+    
+}
+
+.raya{
+    border-left: 1.5px solid black;
+    height: 278px;
+    position: absolute;
+
+}
+
+.titlediv{
+    color: black;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.contenido{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.bt{
+    background-color: blueviolet;
+    padding: 20px 15px;
+    border: none;
+    margin-left: 20px;
+    color: white;
+}
+
+#bt2{
+    position: relative;
+    bottom: -41px;
+}
+#bt3{
+    position: relative;
+    bottom: -20px;
+}
+
+.fl{
+    display: block;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    margin-left: 30px;
+}
+/* }
+.flecha{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    transform: rotate(45deg);
+    float: right;
+    text-decoration: none;
+    color: black;
+}
+.flecha2{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    transform: rotate(45deg);
+    float: right;
+    text-decoration: none;
+    color: black;
+    top: -100;
+} */
+.comentarios{
+    margin-left: 110px;
+    bottom: 150px;
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    height: 30px;
+    width: 90px;
+    background-color: rgb(18, 156, 211);
+    transform: rotate(270deg);
+}
+
+.naruto{
+    width: 900px;
+    padding: 100%;
+>>>>>>> eeedd12 (Primer commit)
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Publica - Ejemplo AJAX con jQuery</title>
+</head>
+<body>
+  <!-- Requerimiento 1: Mostrar los usuarios de la primera página -->
+  <h2>Usuarios de la primera página</h2>
+  <div id="users-container"></div>
+  
+  <!-- Requerimiento 2: Botón para cargar usuarios de la segunda página -->
+  <h2>Usuarios de la segunda página</h2>
+  <button id="load-users-btn">Cargar usuarios de la segunda página</button>
+  <ol id="users-list"></ol>
+  
+  <!-- Requerimiento 3: Botón para cargar usuario con id "10" -->
+  <h2>Usuario con id "10"</h2>
+  <button id="load-user-btn">Cargar usuario con id "10"</button>
+  <div id="user-info"></div>
+
+  <!-- Requerimiento 4: Loading personalizado -->
+  <div id="loading-container">
+    <img src="loading.gif" alt="Loading">
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

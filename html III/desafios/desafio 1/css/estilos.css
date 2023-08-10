@@ -1,0 +1,340 @@
+<<<<<<< HEAD
+html{
+background: #10172b;
+}
+body{
+margin: 0;
+}
+
+header>section:first-child{
+height: 30vh;
+}
+header>section>div{
+position: relative;
+margin: 0;
+top: 0%;
+height: 30vh;
+width: 100%;
+background: black;
+}
+.divheader{
+height: 15vh;
+width: 200px;
+background: blue;
+position: relative;
+top: -230px;
+left: 150px;
+}
+.divmain{
+height: 60vh;
+}
+.terc>{
+display: inline-block;
+position: absolute;
+width: 80%;
+height: 0vh !important;
+margin: 0;
+}
+main>div>section>div:last-child{
+background-color: #10172b;
+width: 700px;
+height: 60vh;
+bottom: 60px;
+display: inline-block;
+position: relative;
+right: 0px;
+
+}
+main>div>section>div:first-child{
+height: 60vh;
+width: flex;
+display: inline-block;
+background-color: #10172b;
+margin: 0;
+position: relative;
+top: 0px;
+margin-right: -10px;
+}
+main>div{
+background-color: #10172b;
+
+}
+.divulti{
+background-color: black;
+text-align: center;
+bottom: 0px;
+margin: 0;
+position:fixed;
+width: 100%;
+}
+@media screen and (max-width:450px) {
+header{
+margin: 0vh 1vw;
+padding: 0;
+margin: 0;
+padding: 0;
+}
+}
+/* IMAGENES */
+
+.icon1{
+background-image:url("../img/sora\ y\ shiro.jpg");
+height: 70px;
+width: 70px;
+background-repeat: no-repeat;
+background-position: 50%;
+border-radius: 50%;
+background-size: 100px 100px;
+display: block;
+margin: 0 0px 10px 180px;
+}
+img{
+height: 50px;
+width: 50px;
+}
+.icon{
+display: inline-block;
+margin: 0;
+border-radius: 50%;
+margin-left: 30px;
+}
+.icon2{
+display: inline-block;
+margin: 0;
+border-radius: 50%;
+margin-left: 30px;
+position: relative;
+left: 60px;
+}
+/* FIN DE IMAGENES */
+
+/* TEXTOS */
+.divulti>h3{
+color: white;
+margin: 0;
+position: relative;
+}
+header>section>div>h1{
+color: white !important;
+margin: 0;
+top: 80px;
+text-align: center;
+position: relative;
+font-family: 'Montserrat', sans-serif;
+}
+.h5header{
+color: white;
+margin: 0;
+top: 80px;
+position: relative;
+text-align: center;    
+font-family: 'Montserrat', sans-serif;
+font-family: 'Questrial', sans-serif;
+}
+.divheader>h2{
+text-align: center;
+position: relative;
+top: 40px;
+}
+.divheader>h6{
+text-align: center;
+position: relative;
+top: 20px;
+}
+.divul{
+margin-top: 0;
+background: orange;
+}
+.divul>li{
+text-align: center;
+list-style: none;
+}
+.divul>li>ul{
+display: inline-block;
+list-style: none;
+}
+main>div>section>div>h5,p,b{
+text-align: center;
+margin-left: 0;
+display: block;
+color: yellow;
+}
+main>div>section>div>h1{
+margin-top: 0;
+text-align: center;
+color: yellow;
+}
+.ico>h1,.P,.ico>p{
+text-align: center;
+display: block;
+=======
+html{
+background: #10172b;
+}
+body{
+margin: 0;
+}
+
+header>section:first-child{
+height: 30vh;
+}
+header>section>div{
+position: relative;
+margin: 0;
+top: 0%;
+height: 30vh;
+width: 100%;
+background: black;
+}
+.divheader{
+height: 15vh;
+width: 200px;
+background: blue;
+position: relative;
+top: -230px;
+left: 150px;
+}
+.divmain{
+height: 60vh;
+}
+.terc>{
+display: inline-block;
+position: absolute;
+width: 80%;
+height: 0vh !important;
+margin: 0;
+}
+main>div>section>div:last-child{
+background-color: #10172b;
+width: 700px;
+height: 60vh;
+bottom: 60px;
+display: inline-block;
+position: relative;
+right: 0px;
+
+}
+main>div>section>div:first-child{
+height: 60vh;
+width: flex;
+display: inline-block;
+background-color: #10172b;
+margin: 0;
+position: relative;
+top: 0px;
+margin-right: -10px;
+}
+main>div{
+background-color: #10172b;
+
+}
+.divulti{
+background-color: black;
+text-align: center;
+bottom: 0px;
+margin: 0;
+position:fixed;
+width: 100%;
+}
+@media screen and (max-width:450px) {
+header{
+margin: 0vh 1vw;
+padding: 0;
+margin: 0;
+padding: 0;
+}
+}
+/* IMAGENES */
+
+.icon1{
+background-image:url("../img/sora\ y\ shiro.jpg");
+height: 70px;
+width: 70px;
+background-repeat: no-repeat;
+background-position: 50%;
+border-radius: 50%;
+background-size: 100px 100px;
+display: block;
+margin: 0 0px 10px 180px;
+}
+img{
+height: 50px;
+width: 50px;
+}
+.icon{
+display: inline-block;
+margin: 0;
+border-radius: 50%;
+margin-left: 30px;
+}
+.icon2{
+display: inline-block;
+margin: 0;
+border-radius: 50%;
+margin-left: 30px;
+position: relative;
+left: 60px;
+}
+/* FIN DE IMAGENES */
+
+/* TEXTOS */
+.divulti>h3{
+color: white;
+margin: 0;
+position: relative;
+}
+header>section>div>h1{
+color: white !important;
+margin: 0;
+top: 80px;
+text-align: center;
+position: relative;
+font-family: 'Montserrat', sans-serif;
+}
+.h5header{
+color: white;
+margin: 0;
+top: 80px;
+position: relative;
+text-align: center;    
+font-family: 'Montserrat', sans-serif;
+font-family: 'Questrial', sans-serif;
+}
+.divheader>h2{
+text-align: center;
+position: relative;
+top: 40px;
+}
+.divheader>h6{
+text-align: center;
+position: relative;
+top: 20px;
+}
+.divul{
+margin-top: 0;
+background: orange;
+}
+.divul>li{
+text-align: center;
+list-style: none;
+}
+.divul>li>ul{
+display: inline-block;
+list-style: none;
+}
+main>div>section>div>h5,p,b{
+text-align: center;
+margin-left: 0;
+display: block;
+color: yellow;
+}
+main>div>section>div>h1{
+margin-top: 0;
+text-align: center;
+color: yellow;
+}
+.ico>h1,.P,.ico>p{
+text-align: center;
+display: block;
+>>>>>>> eeedd12 (Primer commit)
+}

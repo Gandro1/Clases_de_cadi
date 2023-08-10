@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+1. En un circo existen descuentos en las entradas segun la edad del cliente.
+De 0 a 2 años gratis.
+De 3 a 6 años 50% descuento.
+De 7 a 15 años 25% descuento.
+Tercera edad (se considera: mujeres mayores o iguales a 55 años y hombres mayores o iguales a 60 años): 30%.
+-Estableza un codigo que imprima por consola el costo del boleto teniendo en cuenta que el boleto cuesta 17$ y solo se aceptan pagos en bolivares al cambio oficial BCV.
+-Probar el codigo estableciendo que la edad sea aleatorio entre 0 y 75.
+
+
+
+
+
+=======
+1. En un circo existen descuentos en las entradas segun la edad del cliente.
+De 0 a 2 años gratis.
+De 3 a 6 años 50% descuento.
+De 7 a 15 años 25% descuento.
+Tercera edad (se considera: mujeres mayores o iguales a 55 años y hombres mayores o iguales a 60 años): 30%.
+-Estableza un codigo que imprima por consola el costo del boleto teniendo en cuenta que el boleto cuesta 17$ y solo se aceptan pagos en bolivares al cambio oficial BCV.
+-Probar el codigo estableciendo que la edad sea aleatorio entre 0 y 75.
+
+
+
+
+
+>>>>>>> eeedd12 (Primer commit)

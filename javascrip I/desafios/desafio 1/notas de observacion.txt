@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+la pagina de: https://www3.cuevana3.ai/inicio
+Con la javascrip activada las previsualizaciones de las peliculas se muestran haciendo ver la pagina mas atractiva.
+misntras que si se desactiva no muestra ninguna imagen, ni previsualizacion. se queda girando la ruedita de carga
+=======
+la pagina de: https://www3.cuevana3.ai/inicio
+Con la javascrip activada las previsualizaciones de las peliculas se muestran haciendo ver la pagina mas atractiva.
+misntras que si se desactiva no muestra ninguna imagen, ni previsualizacion. se queda girando la ruedita de carga
+>>>>>>> eeedd12 (Primer commit)
+donde deveria de estar las previsualizaciones/imagenes

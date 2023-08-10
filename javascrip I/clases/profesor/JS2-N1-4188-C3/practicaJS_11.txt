@@ -1,0 +1,1 @@
+1. Agregar ciclos para validar las entradas de los valores en los prompt. En el mismo ejercicio anterior.

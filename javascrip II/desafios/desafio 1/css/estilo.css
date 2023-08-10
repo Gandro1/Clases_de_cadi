@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+.diva{
+background: green;
+height: 70px;
+width: 100%;
+}
+.divb{
+background: red;
+height: 70px;
+width: 100%;
+}
+.diva>h1{
+text-align: center;
+padding: 0;
+margin: 0%;
+}
+.divb>h1{
+text-align: center;
+padding: 0;
+margin: 0%;
+=======
+.diva{
+background: green;
+height: 70px;
+width: 100%;
+}
+.divb{
+background: red;
+height: 70px;
+width: 100%;
+}
+.diva>h1{
+text-align: center;
+padding: 0;
+margin: 0%;
+}
+.divb>h1{
+text-align: center;
+padding: 0;
+margin: 0%;
+>>>>>>> eeedd12 (Primer commit)
+}

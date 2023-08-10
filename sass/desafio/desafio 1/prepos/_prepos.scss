@@ -1,0 +1,19 @@
+.rig{
+    font-family: 'Righteous', cursive;
+}
+button{
+    font-size: map-get($map: $fontSizes, $key:large ) !important;
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+    grid-template-rows: repeat(3,2fr);
+}
+.c1, .c2, .c3, .c4, .c5 {
+    width: 100% !important;
+    height: 100% !important;
+  }
+p{
+    text-align: inherit;
+    // vertical-align: middle;
+}

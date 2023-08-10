@@ -1,0 +1,35 @@
+$palette: (
+'primary': #045ccf,
+'secundary': #a2aba5,
+'red': #fc1303,
+'oranje': #b05c02,
+'black-claro': #1f1f1f,
+'grey': #4a4848,
+);
+// separaciones
+$paddings-arribaj: (
+none: 0,
+sm:2px 0,
+md:4px 0,
+lg:8px 0,
+xg:16px 0,
+xx:32px 0,
+XX:64px 0
+);
+$paddings-lados:(
+none: 0,
+sm:0 2px,
+md:0 4px,
+lg:0 8px,
+xg:0 16px,
+xx:0 32px
+);
+$fontSizes:(
+normal: 16px,
+small: 12px,
+large: 24px,
+xlarge: 32px,
+xx:60px,
+XXX:120px,
+X:240px
+);

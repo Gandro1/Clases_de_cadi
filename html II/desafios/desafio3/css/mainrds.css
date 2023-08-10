@@ -1,0 +1,446 @@
+<<<<<<< HEAD
+body
+{
+	font-family: 'Roboto Slab', serif;
+}
+p
+{
+	font-family: 'Roboto', sans-serif;
+}
+#servicios
+{
+	text-align: center;
+	background: #f4f5f4;
+
+}
+#servicios, #empresa
+{
+	
+	padding: 3em 0;
+}
+#servicios div[class*="servicios"] h2
+{
+	font-size: 1.3em;
+	margin-bottom: 2em;
+	font-weight: 400;
+}
+#servicios h2
+{
+	font-size: 3em;
+	font-weight: 700;
+	color: #0056b8;
+	margin-bottom: .5em;
+}
+#servicios p
+{
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 4em;
+}
+#servicios span
+{
+	font-size: 4em;
+	border-radius: 50%;
+	border: 1px solid #E2EAEC;
+	padding: 1em;
+	color: #f6d93c;
+}
+#servicios .col-md-3:hover span
+{
+	color: #fff;
+	background: #0056B8;
+	border: 1px solid #fff;
+	transition: all .8s ease;
+}
+#servicios .col-md-3
+{
+	cursor: pointer;
+}
+#empresa
+{
+	background: #0056b8;
+	color: #fff;
+	padding: 2em 0;
+	
+}
+#empresa p
+{
+	font-size: 1.4em;
+}
+#empresa .filosofia
+{
+	text-align: center;
+	margin-top: 2em;
+	
+	padding-top: 3em;
+}
+#empresa .filosofia p
+{
+	font-size: 1.3em;
+}
+#empresa div > h2
+{
+	color: #f6d93c;
+	font-weight: 700;
+}
+#empresa div > p + h3
+{
+	color: #f6d93c;
+	font-weight: 700;
+}
+#empresa h2
+{
+	font-size: 2.5em;	
+	margin: 1em 0;
+	text-align: center;
+}
+#empresa span
+{
+	font-size: 4em;
+}
+header
+{
+	left: 0;
+	padding: 2em 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	z-index: 9;
+}
+#mapa
+{
+	background: #e7e9e8;
+	text-align: center;
+}
+.panel-body
+{
+	padding: 3em;
+}
+#consulta
+{
+	padding: 2em 0;
+}
+#consulta, #contacto
+{
+	text-align: center;
+	margin: 3em 0;
+}
+#consulta h2
+{
+	font-size: 3em;
+	font-weight: 700;
+	color: #0056b8;
+	margin-bottom: .5em;
+}
+#consulta p
+{
+	margin-bottom: 2em;
+}
+.btn-default
+{
+	background: #0056B8;
+	color: #fff;
+	text-transform: uppercase;
+	border: none;
+	padding: 1em 2em;
+	margin-top: 1em;
+
+}
+#contacto
+{
+	background: #F6D93C;
+	padding: 4em 0;
+}
+#contacto span
+{
+	font-size: 3em;
+	margin: 1em 0;
+	color: #fff;
+}
+#contacto h2
+{
+	font-size: 3em;
+	font-weight: 700;
+	color: #0056b8;
+	margin-bottom: .5em;
+}
+.contacto
+{
+	font-size: 1.5em;
+}
+footer
+{
+	text-align: center;
+}
+nav li
+{
+	text-transform: uppercase;
+	margin-top: 2em;
+}
+nav a
+{
+
+	padding: .8em 1.3em;
+
+}
+nav a:hover
+{ 
+	background: #0056b8;
+	color: #fff;
+	border-radius: .5em;
+	text-decoration: none;
+}
+#sliders img
+{
+	border-bottom: 10px solid #F6D93C;
+	width: 100%;
+}
+footer
+{
+	font-weight: 300;
+	position: relative;
+}
+footer ul
+{
+	font-size: 1.5em;
+	margin: 2em 0;
+}
+footer li
+{
+	text-decoration: underline;
+	margin: 0 1em;
+	color: #666;
+}
+#btn-subir
+{
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+	z-index: 9999;
+	top: inherit;
+	font-size: 4em;
+	cursor: pointer;
+=======
+body
+{
+	font-family: 'Roboto Slab', serif;
+}
+p
+{
+	font-family: 'Roboto', sans-serif;
+}
+#servicios
+{
+	text-align: center;
+	background: #f4f5f4;
+
+}
+#servicios, #empresa
+{
+	
+	padding: 3em 0;
+}
+#servicios div[class*="servicios"] h2
+{
+	font-size: 1.3em;
+	margin-bottom: 2em;
+	font-weight: 400;
+}
+#servicios h2
+{
+	font-size: 3em;
+	font-weight: 700;
+	color: #0056b8;
+	margin-bottom: .5em;
+}
+#servicios p
+{
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 4em;
+}
+#servicios span
+{
+	font-size: 4em;
+	border-radius: 50%;
+	border: 1px solid #E2EAEC;
+	padding: 1em;
+	color: #f6d93c;
+}
+#servicios .col-md-3:hover span
+{
+	color: #fff;
+	background: #0056B8;
+	border: 1px solid #fff;
+	transition: all .8s ease;
+}
+#servicios .col-md-3
+{
+	cursor: pointer;
+}
+#empresa
+{
+	background: #0056b8;
+	color: #fff;
+	padding: 2em 0;
+	
+}
+#empresa p
+{
+	font-size: 1.4em;
+}
+#empresa .filosofia
+{
+	text-align: center;
+	margin-top: 2em;
+	
+	padding-top: 3em;
+}
+#empresa .filosofia p
+{
+	font-size: 1.3em;
+}
+#empresa div > h2
+{
+	color: #f6d93c;
+	font-weight: 700;
+}
+#empresa div > p + h3
+{
+	color: #f6d93c;
+	font-weight: 700;
+}
+#empresa h2
+{
+	font-size: 2.5em;	
+	margin: 1em 0;
+	text-align: center;
+}
+#empresa span
+{
+	font-size: 4em;
+}
+header
+{
+	left: 0;
+	padding: 2em 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	z-index: 9;
+}
+#mapa
+{
+	background: #e7e9e8;
+	text-align: center;
+}
+.panel-body
+{
+	padding: 3em;
+}
+#consulta
+{
+	padding: 2em 0;
+}
+#consulta, #contacto
+{
+	text-align: center;
+	margin: 3em 0;
+}
+#consulta h2
+{
+	font-size: 3em;
+	font-weight: 700;
+	color: #0056b8;
+	margin-bottom: .5em;
+}
+#consulta p
+{
+	margin-bottom: 2em;
+}
+.btn-default
+{
+	background: #0056B8;
+	color: #fff;
+	text-transform: uppercase;
+	border: none;
+	padding: 1em 2em;
+	margin-top: 1em;
+
+}
+#contacto
+{
+	background: #F6D93C;
+	padding: 4em 0;
+}
+#contacto span
+{
+	font-size: 3em;
+	margin: 1em 0;
+	color: #fff;
+}
+#contacto h2
+{
+	font-size: 3em;
+	font-weight: 700;
+	color: #0056b8;
+	margin-bottom: .5em;
+}
+.contacto
+{
+	font-size: 1.5em;
+}
+footer
+{
+	text-align: center;
+}
+nav li
+{
+	text-transform: uppercase;
+	margin-top: 2em;
+}
+nav a
+{
+
+	padding: .8em 1.3em;
+
+}
+nav a:hover
+{ 
+	background: #0056b8;
+	color: #fff;
+	border-radius: .5em;
+	text-decoration: none;
+}
+#sliders img
+{
+	border-bottom: 10px solid #F6D93C;
+	width: 100%;
+}
+footer
+{
+	font-weight: 300;
+	position: relative;
+}
+footer ul
+{
+	font-size: 1.5em;
+	margin: 2em 0;
+}
+footer li
+{
+	text-decoration: underline;
+	margin: 0 1em;
+	color: #666;
+}
+#btn-subir
+{
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+	z-index: 9999;
+	top: inherit;
+	font-size: 4em;
+	cursor: pointer;
+>>>>>>> eeedd12 (Primer commit)
+}

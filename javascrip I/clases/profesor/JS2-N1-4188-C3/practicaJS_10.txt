@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+Una fábrica produce 4 tallas de franelas cuyos precios son: Talla Precio (Bs.) S 50000 M 55000 L 60000 XL 65000  La fábrica tiene la siguiente política de descuento según la cantidad de unidades a comprar: Entre 6 y 11 unidades tendrá un descuento del 5% Entre 12 y 24 unidades tendrá un descuento del 10% Más de 2 docenas el descuento será del 15%. 
+Teniendo los siguientes datos de una operación de compra: nombre del cliente, cantidad de unidades a comprar y talla de franela seleccionada; deben generarse las siguientes salidas: nombre del cliente, cantidad de unidades solicitadas, monto del descuento (incluya el porcentaje) y monto a pagar. NOTA: En una operación de compra sólo se compra una sola talla.
+=======
+Una fábrica produce 4 tallas de franelas cuyos precios son: Talla Precio (Bs.) S 50000 M 55000 L 60000 XL 65000  La fábrica tiene la siguiente política de descuento según la cantidad de unidades a comprar: Entre 6 y 11 unidades tendrá un descuento del 5% Entre 12 y 24 unidades tendrá un descuento del 10% Más de 2 docenas el descuento será del 15%. 
+Teniendo los siguientes datos de una operación de compra: nombre del cliente, cantidad de unidades a comprar y talla de franela seleccionada; deben generarse las siguientes salidas: nombre del cliente, cantidad de unidades solicitadas, monto del descuento (incluya el porcentaje) y monto a pagar. NOTA: En una operación de compra sólo se compra una sola talla.
+>>>>>>> eeedd12 (Primer commit)
+Switch - Operador Ternario ( ? : ) - conversiones de String.

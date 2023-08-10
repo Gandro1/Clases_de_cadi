@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+1. Definir e inicializar las siguientes variables.
+a: number
+b: string (numerico)
+c: string (palabra)
+d: boolean
+e: undefined
+2. Vamos a permutar operaciones aritmeticas con las variables.
+Ej: a + b; b + a; Demostrar la conmutacion.
+3. Resultados impresos en la consola
+=======
+1. Definir e inicializar las siguientes variables.
+a: number
+b: string (numerico)
+c: string (palabra)
+d: boolean
+e: undefined
+2. Vamos a permutar operaciones aritmeticas con las variables.
+Ej: a + b; b + a; Demostrar la conmutacion.
+3. Resultados impresos en la consola
+>>>>>>> eeedd12 (Primer commit)
+4. Agregar en algunas de ellas un condicional donde nos indique con el uso de la funcion isNan(), si el resultado es un numero o no.
