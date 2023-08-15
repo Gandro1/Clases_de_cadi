@@ -1,71 +1,157 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Requerimiento 1: Obtener áreas de estudio y mostrarlas en el HTML
-    fetch('https://api.cadif1.com/areadeestudio')
-      .then(response => response.json())
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("https://api.cadif1.com/areadeestudio")
+    .then(result => result.json())
+    .then(data => {
+      let areasContainer = data.areas;
+      let areasDeEstudio = document.getElementById("areasDeEstudio");
+
+      areasContainer.forEach(area => {
+        let areaDiv = document.createElement("div");
+        areaDiv.className = "area";
+        areaDiv.dataset.id = area.id;
+        areaDiv.innerHTML = `<h2>${area.nombre}</h2>`;
+        areasDeEstudio.appendChild(areaDiv);
+
+        areaDiv.addEventListener('click', function (event) {
+          let idAreaDeEstudio = event.currentTarget.dataset.id;
+          cursos(idAreaDeEstudio);
+        });
+      });
+    })
+    .catch(error => {
+      console.log("Ha ocurrido un error:", error);
+    });
+
+  function cursos(idArea) {
+    console.log(idArea);
+    console.log("Entraste en la funcion cursos");
+    fetch(`https://api.cadif1.com/curso/de_un_area/${idArea}`)
+      .then(result => result.json())
       .then(data => {
-        const areasDeEstudio = data.areas;
-        const areasContainer = document.getElementById('areasDeEstudio');
-  
-        areasDeEstudio.forEach(area => {
-          const areaDiv = document.createElement('div');
-          areaDiv.className = 'area';
-          areaDiv.dataset.id = area.id;
-          areaDiv.textContent = area.nombre;
-          areasContainer.appendChild(areaDiv);
+        console.log(data)
+        let cursosDeArea = data.cursos;
+        let cursosContainer = document.getElementById("cursosDeArea");
+        cursosContainer.innerHTML = "";
+
+        cursosDeArea.forEach(cursos => {
+          let cursoDiv = document.createElement("div");
+          cursoDiv.className = "curso";
+          cursoDiv.dataset.id = cursos.id;
+          cursoDiv.innerHTML = `<h2>${cursos.nombre}</h2>`;
+          cursosContainer.appendChild(cursoDiv);
+
+          cursoDiv.addEventListener('click', function (event) {
+            let idCurso = event.currentTarget.dataset.id;
+            niveless(idCurso);
+            // debugger
+          });
         });
       })
-      .catch(error => console.error('Error:', error));
-  
-    // Requerimiento 2: Mostrar cursos de un área al hacer clic en ella
-    document.addEventListener('click', function(event) {
-      if (event.target && event.target.classList.contains('area')) {
-        const idAreaDeEstudio = event.target.dataset.id;
-        obtenerCursosPorArea(idAreaDeEstudio);
-      }
-    });
-  
-    function obtenerCursosPorArea(idArea) {
-      fetch(`https://api.cadif1.com/curso/de_un_area/${idArea}`)
-        .then(response => response.json())
-        .then(data => {
-          const cursosDeArea = data.cursos;
-          const cursosContainer = document.getElementById('cursosDeArea');
-          cursosContainer.innerHTML = '';
-  
-          cursosDeArea.forEach(curso => {
-            const cursoDiv = document.createElement('div');
-            cursoDiv.className = 'curso';
-            cursoDiv.dataset.id = curso.id;
-            cursoDiv.textContent = curso.nombre;
-            cursosContainer.appendChild(cursoDiv);
-          });
-        })
-        .catch(error => console.error('Error:', error));
-    }
-  
-    // Requerimiento 3: Mostrar niveles de un curso al hacer clic en él
-    document.addEventListener('click', function(event) {
-      if (event.target && event.target.classList.contains('curso')) {
-        const idCurso = event.target.dataset.id;
-        obtenerNivelesDeCurso(idCurso);
-      }
-    });
-  
-    function obtenerNivelesDeCurso(idCurso) {
-      fetch(`https://api.cadif1.com/curso/${idCurso}`)
-        .then(response => response.json())
-        .then(data => {
-          const nivelesDeCurso = data.niveles;
-          const nivelesContainer = document.getElementById('nivelesDeCurso');
-          nivelesContainer.innerHTML = '';
-  
-          nivelesDeCurso.forEach(nivel => {
-            const nivelDiv = document.createElement('div');
-            nivelDiv.className = 'nivel';
-            nivelDiv.textContent = nivel.nombre;
-            nivelesContainer.appendChild(nivelDiv);
-          });
-        })
-        .catch(error => console.error('Error:', error));
+      .catch(error => {
+        console.log("Ha ocurrido un error curso: ", error);
+      });
     }
   });
+  function niveless(idCurso) {
+    // debugger
+    console.log(idCurso);
+    console.log("Entraste en la funcion niveles");
+    let nivelesContainer = document.getElementById("nivelesDeCurso");
+    nivelesContainer.innerHTML = "";
+    fetch(`https://api.cadif1.com/curso/${idCurso}`)
+      .then(result => result.json())
+      .then(data => {
+        // debugger
+        let nivelesDeCurso = data.curso
+        let nivelDiv = document.createElement("div");
+        console .log(data)
+        nivelDiv.className = "curso";
+        nivelDiv.dataset.id = data.curso.id;
+        nivelesContainer.appendChild(nivelDiv);
+        nivelDiv.innerHTML = `
+        <h2>${data.curso.objetivoresumido}</h2>
+        <h2>Niveles: ${data.curso.niveles.length} </h2>
+        <h2>Costo por nivel: ${data.curso.niveles[0].precio}</h2>
+        `;
+        
+      })
+      .catch(error => {
+        console.log("Ha ocurrido un error niveles: ", error);
+      });
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("https://api.cadif1.com/carrera")
+        .then(result => result.json())
+        .then(data => {
+          let carrerasActivas = data.carreras.filter(carrera => carrera.activa === "1");
+          let carrerasContainer = document.getElementById("carreras");
+    
+          carrerasActivas.forEach(carrera => {
+            let carreraDiv = document.createElement("div");
+            carreraDiv.className = "carrera";
+            carreraDiv.dataset.id = carrera.id;
+            carreraDiv.innerHTML = `<h2>${carrera.nombre}</h2>`;
+            carrerasContainer.appendChild(carreraDiv);
+          });
+        })
+        .catch(error => {
+          console.log("Ha ocurrido un error:", error);
+        });
+        function cargarCarreras() {
+          fetch("https://api.cadif1.com/carrera")
+            .then(result => result.json())
+            .then(data => {
+              console.log("Cargando carreras");
+              console.log(data);
+              let carrerasActivas = data.carreras.filter(carrera => carrera.activa === "1");
+              let carrerasContainer = document.getElementById("carreras");
+              carrerasContainer.innerHTML = "";
+      
+              carrerasActivas.forEach(carrera => {
+                let carreraDiv = document.createElement("div");
+                carreraDiv.className = "carrera";
+                carreraDiv.dataset.id = carrera.id;
+                carreraDiv.innerHTML = `<h2>${carrera.nombre}</h2>`;
+                carrerasContainer.appendChild(carreraDiv);
+      
+                carreraDiv.addEventListener('click', function (event) {
+                  let idCarrera = event.currentTarget.dataset.id;
+                  obtenerPensum(idCarrera);
+                });
+              });
+            })
+            .catch(error => {
+              console.log("Ha ocurrido un error al cargar las carreras:", error);
+            });
+        }
+      
+        function obtenerPensum(idCarrera) {
+          fetch(`https://api.cadif1.com/carrera/${idCarrera}`)
+            .then(result => result.json())
+            .then(data => {
+              console.log("Cargando pensum");
+              console.log(data);
+              let pensumCarrera = data.pensum;
+              let pensumContainer = document.getElementById("pensumCarrera");
+              pensumContainer.innerHTML = "";
+      
+                let materiaDiv = document.createElement("div");
+                materiaDiv.className = "materia";
+                materiaDiv.innerHTML = `
+                <h3>Materias: ${data.carrera.pensum[0][0].materia}, ${data.carrera.pensum[0][0].nivel} </h3>
+                <h3> Materia: ${data.carrera.pensum[0][1].materia}, ${data.carrera.pensum[0][1].nivel} </h3>
+               
+
+                `;
+                pensumContainer.appendChild(materiaDiv);
+             
+            })
+            .catch(error => {
+              console.log("Ha ocurrido un error al obtener el pensum:", error);
+            });
+        }
+      
+        cargarCarreras();
+    });
+    
+  

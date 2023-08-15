@@ -1,5 +1,5 @@
-#areasDeEstudio>p{
+#areasDeEstudio>.area>h2{
     background-color: #56b566;
     padding: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
