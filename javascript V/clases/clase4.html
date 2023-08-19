@@ -1,0 +1,116 @@
+José Luis Rojas Dellan
+José Luis Rojas Dellan dice:<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inicio de sesión</h1>
+    <form id="inicio-sesion">
+        Usuario <input type="text" name="emailOrUsername">
+        Clave <input type="password" name="password">
+        <input type="button" id="btnIniciarSesion" value="Iniciar sesión">
+    </form>
+    <div id="datos-usuario">
+        <h1>Datos del usuario</h1>
+        Nombre <span id="nombre"></span>
+    </div>
+    <script src="./jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        let clientId = "3f7f8c73a542c5e3601e279682c6e5dafcef6f5a";
+        let urlBase = "https://core.kpimetro.com/desarrollo/";
+        let token ="";
+        
+        $("#datos-usuario").hide();
+
+        $("#btnIniciarSesion").click(()=>{
+            fetch(urlBase+"login",{
+                method:"post",
+                body: new FormData($("#inicio-sesion")[0]),
+                headers:{
+                    "client_id":clientId
+                }
+            })
+            .then((resp)=>{
+                if (resp.ok)
+                    return resp.json();
+            })
+            .then((json)=>{
+                console.log(json)
+               
+                if (!json.OK)
+                    mensajeError("Usuario o clave no existen")
+                else{
+                    mensajeExito("Bienvenido")
+                    $("#inicio-sesion").hide();
+                    $("#nombre").text(json.data.nombre);
+                    $("#datos-usuario").show();
+                    token = json.data.token
+                    localStorage.setItem("jwt",token)
+
+                    getEmpresas()
+                }
+            })
+            .catch((error)=>{
+                console.log(error)
+                mensajeError("Error al intentar iniciar sesion. Error: ")
+            })
+        })
+
+        function getEmpresas(){
+            fetch(urlBase+"empresa/cuenta",{
+                headers:{
+                    "client_id":clientId,
+                    "Authorization": token
+                }
+            })
+            .then((result)=>{
+                return result.json()
+            })
+            .then((json)=>{
+                console.log(json)
+            })
+            .catch(()=>{
+                console.log("error")
+            })
+        }
+
+        function mensajeExito(mensaje){
+            const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 5000,
+            timerProgressBar: true,
+            })
+
+            
+Toast.fire
+({
+            icon: 'success',
+            title: mensaje
+            })
+        }
+
+        function mensajeError(mensaje){
+            const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 5000,
+            timerProgressBar: true,
+            })
+
+            
+Toast.fire
+({
+            icon: 'error',
+            title: mensaje
+            })
+        }
+    </script>
+</body>
+</html> 

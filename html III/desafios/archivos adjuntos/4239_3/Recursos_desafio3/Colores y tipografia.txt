@@ -1,0 +1,11 @@
+COLORES:
+
+- negro: rgb(0,0,0)
+- anaranjado: #F57F17
+
+TIPOGRAFÍAS:
+
+Título: Playfair Display
+Texto base: Raleway
+
+*disponibles en Google Fonts
