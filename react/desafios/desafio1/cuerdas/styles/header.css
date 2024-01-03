@@ -1,0 +1,62 @@
+.nav{
+    display: flex;
+    height: 50px;
+    width: 30vh;
+}
+.hea-container{
+    display: flex;
+    justify-content: space-between !important;
+}
+.nav>img{
+    height: 35px;
+    margin-right: 30px;
+}
+.grande{
+    height: 25px !important;
+    padding: 5px 0 0 0 !important;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+}
+.logo{
+    height: 40px;
+    width: 45px;
+    margin: 6px 0 0 20px;    
+}
+.icono{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+.search-input {
+    flex: 1;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+  }
+  .container{
+    margin-top: 50px;
+    width: 80vh;
+    display: flex;
+    justify-content: space-around;
+  }
+  .imagenes{
+    height: 48vh !important;
+    margin-top: 35px;
+  }
+  .iconos{
+    height: 50px;
+    display: flex;
+  }
+  .ico{
+    height: 30px;
+    margin: 10px 20px 0 0;
+  }

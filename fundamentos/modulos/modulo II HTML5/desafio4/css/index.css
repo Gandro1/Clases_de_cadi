@@ -1,0 +1,60 @@
+/*BODY*/
+body{
+    margin: 0;
+}
+a, #sec3, h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+height: 200px;
+position: fixed;
+top: 0;
+background: transparent;
+color: blue;
+}
+nav{
+    display: inline-block;
+    }
+    .Encabezamiento{
+        display: inline-block;
+        margin: 20px;
+    }
+    .Encabezamiento a{
+        color: black;
+        text-decoration: black;
+    }
+    h1{
+        margin: 0; color: blue;
+    }
+    h4{
+        padding: 100px 80px;
+        
+    }
+
+    #sec1{background-image: url(../img/calentamiento-global-desierto.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+       
+
+    #sec2{
+            font-family: 'Orbitron', sans-serif;
+        }
+    
+    #sec3{ background-image: url(../img/degradacion-Tierra-854x465.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+       
+    footer{
+        height: 50px;
+        background-color: black;
+        color: white;
+    }
+
+    
+
+   

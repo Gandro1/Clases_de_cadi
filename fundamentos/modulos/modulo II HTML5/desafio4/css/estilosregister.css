@@ -1,0 +1,12 @@
+body{
+    background: black; color: aliceblue;
+}
+nav{
+    display: inline-block;
+}
+.cabeza{
+    display: inline-block; margin: 20px;
+}
+.cabeza a{
+    color: white; text-decoration: blue;
+}

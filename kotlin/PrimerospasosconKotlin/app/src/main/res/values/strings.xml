@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Primeros pasos con Kotlin</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
+    <string name="height">Altura</string>
+    <string name="weight">Peso</string>
+    <string name="age">Edad</string>
+    <string name="Calculate">Calcular</string>
+    <string name="Result">Tu Resultado</string>
+
+</resources>

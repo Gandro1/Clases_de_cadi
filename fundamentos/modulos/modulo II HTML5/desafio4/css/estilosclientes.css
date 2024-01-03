@@ -1,0 +1,19 @@
+body{
+    background: black; color: aliceblue;
+}
+
+table{
+    margin-top: 100px; border: double 2px blue; border-collapse: collapse;
+}
+td, th{
+    border: solid 1px blue;
+}
+nav{
+    display: inline-block;
+}
+.cabeza{
+    display: inline-block; margin: 20px;
+}
+.cabeza a{
+    color: aliceblue; text-decoration: blue;
+}
