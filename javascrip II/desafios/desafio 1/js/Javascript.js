@@ -1,114 +1,80 @@
-<<<<<<< HEAD
+//variables
 click1 = new String
-nombop=["articulo1","articulo2","articulo3"]
+nombop=["a1","a2","a3"]
 cantiop=[1,5,10]
 var nombre=new String
 var cantidad=new Number
 var valor = new Number
+let click = new Number
 var posicion = new Number
 var opcion= document.getElementById("adi");
 var opcion2= document.getElementById("sus")
 var result
 var clon = false
-nombre=prompt("Porfavor ingrece el nombre del articulo")
 
-// console.log(clon)
-
-opcion.onclick = clickop;
-opcion2.onclick = clickop2;
-function clickop(){
-opcion=document.getElementById("adi")
-alert("El usuario dio click a Adiciona")
-//stopPropagation()
-}
-function clickop2(){
-opcion2=document.getElementById("sus")
-alert("El ususario dio Click a sustraer")
-//stopPropagation()
+//nombre del producto, llamando a la funcion y asegurar que el nombre se encuentre en el arreglo
+while (clon== false){
+    nombre=prompt("Porfavor Ingrese el nombre del articulo")
+    clon=nombop.includes(nombre)
+    posicion= nombop.indexOf(nombre)
+    if(clon== false){
+    alert(`El nombre que ingreso "${nombre}" no se encuentra en ningun articulo, por favor ingrese uno nuevo`)
+    }
 }
 
-if(opcion.onclick){
-click1="Adicion"
-}else{if(opcion2.onclick){
-click1="Sustraer"
-}}
-console.log(click1)
 
-function adicionaosustrae(a,b,c){
-if(click1=="Adicion"){
-clon=nombop.includes(nombre)
-if (clon==true){
-posicion=nombop.indexOf(nombre)
-}
-valor=posicion+cantiop[posicion]
-cantiop.splice(posicion,1,valor)
-return cantiop
-}else{if(click1=="sus"){
-clon=nombop.includes(nombre)
-if (clon==true){
-posicion=nombop.indexOf(nombre)
-}
-valor=posicion-cantiop[posicion]
-cantiop.splice(posicion,1,valor)
-return cantiop
-}}
-}
-adicionaosustrae(nombop,cantiop,click1)
-=======
-click1 = new String
-nombop=["articulo1","articulo2","articulo3"]
-cantiop=[1,5,10]
-var nombre=new String
-var cantidad=new Number
-var valor = new Number
-var posicion = new Number
-var opcion= document.getElementById("adi");
-var opcion2= document.getElementById("sus")
-var result
-var clon = false
-nombre=prompt("Porfavor ingrece el nombre del articulo")
 
-// console.log(clon)
+//evento click
+opcion.addEventListener("click",(event)=>{
+    event.stopPropagation();
+    valor=realizarAccion(click)
+    while(cantidad<1){
+        cantidad = parseInt(prompt("Ingrese un número positivo"))
+        if(cantidad<0){
+            alert("numero invalido")
+        }
+    }
+    result=adicionaOSustrae(nombre,cantidad,valor)
+    // cantiop.splice(posicion,1,result)
+    resultado()
+})   
+opcion2.addEventListener("click",(event)=>{
+    event.stopPropagation();
+    valor=realizarAccion(click)
+    while(cantidad<1){
+        cantidad = parseInt(prompt("Ingrese un número positivo"))
+        if(cantidad<0){
+            alert("numero invalido")
+        }
+    }
+    result=adicionaOSustrae(nombre,cantidad,valor)
+    // cantiop.splice(posicion,1,result)
+    resultado()
+})   
 
-opcion.onclick = clickop;
-opcion2.onclick = clickop2;
-function clickop(){
-opcion=document.getElementById("adi")
-alert("El usuario dio click a Adiciona")
-//stopPropagation()
-}
-function clickop2(){
-opcion2=document.getElementById("sus")
-alert("El ususario dio Click a sustraer")
-//stopPropagation()
+//funcion de el evento click
+function realizarAccion(accion){
+    if(accion===0){
+        console.log("CLick en Adicionar")
+        return "Adicionar"
+    }else{
+        console.log("Click en Sustraer")
+        return "Sustraer"
+    }
 }
 
-if(opcion.onclick){
-click1="Adicion"
-}else{if(opcion2.onclick){
-click1="Sustraer"
-}}
-console.log(click1)
+//funcion para saber que accion tomar
+function adicionaOSustrae(nom,numero,accion){
+    posicion= nombop.indexOf(nom)
+    if(accion==="Adicionar"){
+        cantiop[posicion] += numero
+    }else if(accion==="Sustraer"){
+        cantiop[posicion] -= numero
+    }
+    // cantiop.splice(posicion,1,nu)
+    return  cantiop[posicion]
+}
 
-function adicionaosustrae(a,b,c){
-if(click1=="Adicion"){
-clon=nombop.includes(nombre)
-if (clon==true){
-posicion=nombop.indexOf(nombre)
+function resultado(){
+    console.log(`Nombre ${nombop[posicion]}, Numero ${cantiop[posicion]}`)
 }
-valor=posicion+cantiop[posicion]
-cantiop.splice(posicion,1,valor)
-return cantiop
-}else{if(click1=="sus"){
-clon=nombop.includes(nombre)
-if (clon==true){
-posicion=nombop.indexOf(nombre)
-}
-valor=posicion-cantiop[posicion]
-cantiop.splice(posicion,1,valor)
-return cantiop
-}}
-}
-adicionaosustrae(nombop,cantiop,click1)
->>>>>>> eeedd12 (Primer commit)
-console.log(adicionaosustrae(nombop,cantiop,click1))
