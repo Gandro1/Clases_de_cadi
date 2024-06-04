@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Desafio2Js2</title>
+</head>
+<style>
+    *{
+        font-family: 'Segoe UI';
+    }
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        color: white;
+    }
+    header ul{
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        list-style: none;
+    }
+    header ul li:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    section{
+        height: 700px;
+    }
+    #btnSubir{
+        padding: 15px;
+        background-color: aquamarine;
+        border-radius: 45px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    #btnSubir:hover{
+        cursor: pointer;
+    }
+    .btnTitle{
+        padding: 50px;
+        border-radius: 30px;
+        border: none;
+        background: linear-gradient(to left, #1ba5cb, #008ccb, #1271c4, #4f50af, #70228c);
+        color: white;
+        font-weight: bold;
+        font-size: xx-large;
+    }
+    #btnTitle:hover{
+        cursor: pointer;
+    }
+    .formPage{
+        width: 40%;
+        margin: 15px auto;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right bottom, #f6ff1c, #ffc000, #ff832c, #e04b45, #ae1f51);
+        color: white;
+        font-weight: bold;
+        border: solid #161615 3px;
+        border-radius: 15px;
+    }
+</style>
+<body onclick="cambiarFondo(); event.stopPropagation()" >
+    <header onclick="event.stopPropagation()">
+        <h1>AvilaPro</h1>
+        <nav>
+            <ul>
+                <li onclick="window.open('./login.html', '_blank','width=100,height=100'); event.stopPropagation()">Iniciar Sesión</li>
+                <li>Regístrate</li>
+            </ul>
+        </nav>
+    </header>
+    <div id="btnSubir" onclick="irArriba(); event.stopPropagation()" >
+        <ion-icon name="arrow-up"></ion-icon>
+    </div>
+    <main>
+        <section style="background: rgba(246, 243, 35, 0.123);">
+            <h1 style="margin: 0;">Desafio 2 Javascript Nivel 2</h1>
+            <button id="btnTitle" class="btnTitle"onclick="cambiarTitulo();event.stopPropagation()">Cambiar Titulo</button>
+            <button class="btnTitle" onclick="inyectarDato()">
+                Capturar Info
+            </button>
+            <button class="btnTitle" onclick="cambiarColor()">
+                Cambiar propiedad
+            </button>
+            <button class="btnTitle" id="recargar">
+                Recargar Saldo (doble click)
+            </button>
+            <h1 id="superTitulo" style="display: none"></h1>
+            <h2>Saldo: <span id="saldo">0</span>$</h2>
+            <!-- Formulario -->
+            <form class="formPage" action="" method="get" name="factura">
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre">
+                <label for="descripcion">descripcion:</label>
+                <input type="text" name="descripcion" id="descripcion">
+                <label for="precio">precio</label>
+                <input type="text" name="precio" id="precio">
+                <label for="cantidad">cantidad</label>
+                <input type="text" name="cantidad" id="cantidad">
+                <input type="button" value="Facturar" onclick="facturar()">
+            </form>
+
+        </section>
+        <section id="facturado" style="background: rgba(0, 0, 255, 0.061);"></section>
+        <section style="background: rgba(255, 0, 0, 0.089);"></section>
+    </main>
+
+    <!-- SCRIPTS SOLUCION DEL DESAFIO -->
+    <script>
+    //    -CREAR UNA FUNCION QUE SOLICITE AL USUARIO SU NOMBRE
+    //    -LUEGO USAR ESE DATO PARA MODIFICAR EL CONTENIDO DE superTitulo
+    //      -HABILITAR LA VISTA DE superTitulo
+    //     -PROGRAMAR UNA FUNCION PARA CAMBIAR LA PROPIEDAD color DE superTitulo.
+    function inyectarDato() {
+        event.stopPropagation();
+        let element = document.getElementById("superTitulo");
+        let msg = prompt("Ingresa tu nombre >");
+        element.innerHTML = msg;
+        if (msg.length > 0) {
+            element.style.display = "block";
+        }else{
+            alert("El nombre no fue suministrado");
+        }
+    }
+    function cambiarColor() {
+        event.stopPropagation();
+        let element = document.getElementById("superTitulo");
+        element.style.color = "yellow";
+    }
+    function facturar() {
+        event.stopPropagation();
+        let f = document.factura;
+        let nombreCliente = f.elements[0].value;
+        let nombreProducto = f.descripcion.value;
+        let precioUnitario = f.elements[2].value;
+        let cantidad = f.cantidad.value;
+        
+        let subtotal = parseFloat(precioUnitario)*parseFloat(cantidad);
+        let iva = subtotal * 0.16;
+        let total = subtotal + iva;
+
+        //Inyectar la informacion en el id facturado
+        let fact = document.getElementById("facturado");
+        fact.innerHTML = `<h1>Estimado: ${nombreCliente}</h1><h2>Producto Comprado: ${nombreProducto}</h2><p>Precio Unitario: ${precioUnitario}</p><p>Cantidad: ${cantidad}</p><p>Subtotal: ${subtotal}</p><p>iva(16%) = ${iva}</p><h3>El total es: ${total}</h3>`;
+
+        //Cambiar el valor de Saldo.
+        let elSaldo = document.getElementById("saldo");
+        elSaldo.innerHTML = (parseFloat(elSaldo.innerHTML) - total).toString();
+        console.log(elSaldo.innerHTML);
+        //Limpiamos los campos
+        f.reset();
+    }
+    function recargarSaldo(){
+        let elSaldo = document.getElementById("saldo");
+        let monto = prompt("Ingrese el monto a recargar: ");
+        elSaldo.innerHTML = (parseFloat(elSaldo.innerHTML) + parseFloat(monto)).toString();
+        console.log(elSaldo.innerHTML);
+    }
+    document.getElementById("recargar").addEventListener("dblclick", recargarSaldo);
+    </script>
+    <!--FIN SCRIPTS SOLUCION DEL DESAFIO -->   
+
+
+    <!-- SCRIPTS DE IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/desafio2.js"></script>
+</body>
+</html>

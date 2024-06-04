@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Window Events</title>
+</head>
+<style>
+    *{
+    font-family: 'Segoe UI';
+}
+body{
+    margin: 0;
+}
+
+/*HEADER*/
+header{
+    height: 27.4vh;
+}
+header > div:first-child{
+    height: 47%;
+}
+header > div:last-child{
+    height: 43%;
+}
+/* headInput */
+#headInput{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#headInput > img{
+    height: 35px;
+    object-fit: 2 / 1;
+}
+#headInput > div:first-of-type{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid lightgray;
+    border-radius: 35px;
+    padding: 8px 12px;
+}
+#headInput > div:first-of-type > div{
+    padding: 0 6px;
+}
+#headInput > div:first-of-type > div:first-child, #headInput > div:first-of-type > div:nth-child(2){
+    border-right: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+#headInput > div:first-of-type > div:nth-child(3){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#headInput > div:first-of-type > div:nth-child(3) div{
+    background-color: #FF385C;
+    border-radius: 50px;
+    padding: 5px 6px;
+    color: white;
+    margin-left: 5px;
+}
+#headInput > div:last-of-type{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+/* headFilter */
+#headFilter{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgba(211, 211, 211, 0.541);
+    border-bottom: 1px solid rgba(211, 211, 211, 0.541);
+}
+#headFilter > div:first-child{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+#headFilter > div:first-child > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#headFilter > div:first-child > div img{
+    width: 24px;
+    aspect-ratio: 1 / 1;
+}
+#headFilter > div:first-child > div span{
+    font-size: 0.75em;
+}
+#headFilter > div:last-child{
+    display: flex;
+    align-items: center;
+}
+#headFilter > div:last-child > div{
+    border: lightgray solid 1px;
+    border-radius: 10px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+}
+#headFilter > div:last-child > div span{
+    font-size: 0.75em;
+    margin-left: 8px;
+}
+
+/*FIN HEADER*/
+
+
+/*MAIN*/
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    padding: 1%;
+}
+main > div{
+    /* background-color: chartreuse; */
+    height: 55vh;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    grid-template-columns: auto;
+}
+main > div > div:first-child{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+main > div:nth-child(1) > div:first-child{
+    background-image: url("https://a0.muscache.com/im/pictures/7cc3c855-f90e-4d0f-9b13-3b5c2a3c4bad.jpg?im_w=720");
+}
+main > div:nth-child(2) > div:first-child{
+    background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-47721565/original/bb35bfcf-f276-4e00-a0d1-73b319b2a9cd.jpeg?im_w=720");
+}
+main > div:nth-child(3) > div:first-child{
+    background-image: url("https://a0.muscache.com/im/pictures/prohost-api/Hosting-34444025/original/cae4b265-0ab6-4993-9eef-0274b187b116.jpeg?im_w=720");
+}
+main > div:nth-child(4) > div:first-child{
+    background-image: url("https://a0.muscache.com/im/pictures/6943ce46-c64f-43b4-824b-5551735befcc.jpg?im_w=720");
+}
+main > div:nth-child(5) > div:first-child{
+    background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-49840035/original/e7496a4a-3cac-444f-8858-15bff633bd42.jpeg?im_w=720");
+}
+main > div:nth-child(6) > div:first-child{
+    background-image: url("https://a0.muscache.com/im/pictures/f192135e-4df8-4d86-9cda-8e4c72fc5d93.jpg?im_w=720");
+}
+main > div:nth-child(7) > div:first-child{
+    background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-40012920/original/2d811bfc-9e1b-41ae-8156-c1df534191ed.jpeg?im_w=720");
+}
+main > div:nth-child(8) > div:first-child{
+    background-image: url("https://a0.muscache.com/im/pictures/cbd1ae40-77b6-46c3-90bc-842eca043e5c.jpg?im_w=720");
+}
+
+main > div > div:last-child{
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    justify-content: space-around;
+    padding: 0 2%;
+}
+main > div > div:last-child > h5{
+    margin: 0
+}
+main > div > div:last-child > span{
+    color: rgb(136, 134, 134);
+}
+span strong{
+    font-weight: bold;
+    color: black;
+}
+
+/* EJEMPLO DE ELEMENTOS QUE ABARCAN MAS FILAS Y/O COLUMNAS */
+/* main > div:nth-child(2){
+    grid-column: 2 / 4;
+}
+main > div:nth-child(3){
+    grid-row: 1/3;
+    grid-column: 4/5;
+}
+main > div:nth-child(5){
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+} */
+
+
+/* FIN DEL MAIN */
+/*FOOTER*/
+footer{
+    height: 7.40vh;
+}
+
+/*FIN FOOTER*/
+
+/*MEDIA QUERIES*/
+
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+    main > div{
+        
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) { 
+    main > div{
+        
+    }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) { 
+    main > div{
+        
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) { 
+    main > div{
+    
+    }
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px) { 
+    main > div{
+        width: 20%;
+        margin: 0 2vw;
+    }
+}
+</style>
+
+<body>
+    
+
+    <!-- SCRIPTS -->
+    <script>
+    window.onload = recursosCargados; 
+    function recursosCargados(){
+       console.log("Recursos Cargados");
+    }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded",  htmlCargado);
+        function htmlCargado(){
+            console.warn("Pagina Cargada!!!");
+        }
+    </script>
+    <script>
+        let algo = prompt("escribe algo");
+    </script>
+    <script>
+        document.body.innerHTML = `<header>
+        <div id="headInput">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/512px-Airbnb_Logo_B%C3%A9lo.svg.png"
+                alt="Logo">
+            <div>
+                <div>En cualquier lugar de mundo</div>
+                <div>Cualquier semana</div>
+                <div>
+                    <span>¿Cuantos?</span>
+                    <div>
+                        <ion-icon name="search"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>Pon tu espacio en Airbnb</div>
+                <div>
+                    <ion-icon name="globe"></ion-icon>
+                </div>
+                <div>
+                    <div>
+                        <ion-icon name="menu"></ion-icon>
+                        <ion-icon name="person"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="headFilter">
+            <div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/c0fa9598-4e37-40f3-b734-4bd0e2377add.jpg" alt="">
+                    <span>Novedad</span>
+                </div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg" alt="">
+                    <span>Diversion</span>
+                </div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" alt="">
+                    <span>Impresionantes</span>
+                </div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" alt="">
+                    <span>Masiones</span>
+                </div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg" alt="">
+                    <span>Parques Nacionales</span>
+                </div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/c9157d0a-98fe-4516-af81-44022118fbc7.jpg" alt="">
+                    <span>Dammusi</span>
+                </div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/eb7ba4c0-ea38-4cbb-9db6-bdcc8baad585.jpg" alt="">
+                    <span>Casas Compartidas</span>
+                </div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/51f5cf64-5821-400c-8033-8a10c7787d69.jpg" alt="">
+                    <span>Hanok</span>
+                </div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg" alt="">
+                    <span>Ciudades famosas</span>
+                </div>
+                <div>
+                    <img src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt="">
+                    <span>Cabañas</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <ion-icon name="options"></ion-icon>
+                    <span>Filtros</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- <h1>Hola</h1> -->
+    <main>
+        <div>
+            <div></div>
+            <div>
+                <h5>Balian Beach - Indonesia</h5>
+                <span>vista 4585 veces en al ultima semana</span>
+                <span>27 de mar - 1 de abr</span>
+                <span>
+                    <strong>116$</strong> noche</span>
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div>
+                <h5>Balian Beach - Indonesia</h5>
+                <span>vista 4585 veces en al ultima semana</span>
+                <span>27 de mar - 1 de abr</span>
+                <span>
+                    <strong>116$</strong> noche</span>
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div>
+                <h5>Balian Beach - Indonesia</h5>
+                <span>vista 4585 veces en al ultima semana</span>
+                <span>27 de mar - 1 de abr</span>
+                <span>
+                    <strong>116$</strong> noche</span>
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div>
+                <h5>Balian Beach - Indonesia</h5>
+                <span>vista 4585 veces en al ultima semana</span>
+                <span>27 de mar - 1 de abr</span>
+                <span>
+                    <strong>116$</strong> noche</span>
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div>
+                <h5>Balian Beach - Indonesia</h5>
+                <span>vista 4585 veces en al ultima semana</span>
+                <span>27 de mar - 1 de abr</span>
+                <span>
+                    <strong>116$</strong> noche</span>
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div>
+                    <h5>Balian Beach - Indonesia</h5>
+                    <span>vista 4585 veces en al ultima semana</span>
+                    <span>27 de mar - 1 de abr</span>
+                    <span>
+                        <strong>116$</strong> noche</span>
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div>
+                    <h5>Balian Beach - Indonesia</h5>
+                    <span>vista 4585 veces en al ultima semana</span>
+                    <span>27 de mar - 1 de abr</span>
+                    <span>
+                        <strong>116$</strong> noche</span>
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div>
+                    <h5>Balian Beach - Indonesia</h5>
+                    <span>vista 4585 veces en al ultima semana</span>
+                    <span>27 de mar - 1 de abr</span>
+                    <span>
+                        <strong>116$</strong> noche</span>
+            </div>
+        </div>
+    </main>
+    <footer></footer>`;
+    </script>
+
+</body>
+</html>
